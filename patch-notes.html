@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurse — Notas da Atualização</title>
+<meta name="description" content="Patch notes de Kurse: alpha 0.6 (em desenvolvimento) e alpha 0.5.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg: #16120e;
+  --bg-2: #1c1712;
+  --surface: #241d17;
+  --surface-2: #2c241c;
+  --border: #3c3226;
+  --text: #eee4d3;
+  --text-dim: #a99a84;
+  --text-faint: #7c6f5e;
+  --accent: #d19a3d;
+  --accent-soft: #8a6a35;
+  --good: #8caf6e;
+  --good-bg: #26301f;
+  --mint: #6fa8a0;
+  --mint-bg: #1e2d2a;
+  --wip: #c98bdb;
+  --wip-bg: #2a2032;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 700px at 15% -10%, #2a2015 0%, transparent 60%),
+    radial-gradient(900px 600px at 100% 0%, #241a12 0%, transparent 55%),
+    var(--bg);
+  color:var(--text);
+  font-family:'Manrope',ui-sans-serif,system-ui,sans-serif;
+  padding-block: 32px 96px;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{
+  max-width:720px;
+  margin:0 auto;
+  padding-inline:20px;
+}
+
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12.5px;
+  letter-spacing:.04em;
+  color:var(--text-faint);
+  text-decoration:none;
+  margin-bottom:28px;
+  transition:color .15s;
+}
+.back-link:hover{color:var(--accent);}
+
+article.version{margin-bottom:64px;}
+article.version:last-child{margin-bottom:0;}
+
+header.hero{
+  padding-bottom:30px;
+  margin-bottom:8px;
+  border-bottom:1px solid var(--border);
+}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{
+  content:"";
+  width:7px;height:7px;
+  background:var(--accent);
+  transform:rotate(45deg);
+  display:inline-block;
+  flex:none;
+}
+.eyebrow.wip{color:var(--wip);}
+.eyebrow.wip::before{background:var(--wip);}
+.wip-badge{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--wip);
+  background:var(--wip-bg);
+  border:1px solid var(--accent-soft);
+  border-radius:20px;
+  padding:3px 10px;
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:1;}
+  50%{opacity:.55;}
+}
+h1{
+  font-family:'Cinzel',serif;
+  font-weight:700;
+  font-size:clamp(30px,6vw,44px);
+  line-height:1.1;
+  letter-spacing:.01em;
+  margin:0 0 14px;
+  text-wrap:balance;
+  color:#f6ead2;
+}
+h1 .accent{color:var(--accent);}
+h1 .accent.wip{color:var(--wip);}
+.dek{
+  font-size:16.5px;
+  line-height:1.65;
+  color:var(--text-dim);
+  max-width:54ch;
+  margin:0;
+}
+
+section.group{margin-top:42px;}
+.group-head{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  margin-bottom:14px;
+}
+.group-head .icon{font-size:19px;line-height:1;}
+.group-head h2{
+  font-family:'Cinzel',serif;
+  font-size:20px;
+  font-weight:600;
+  margin:0;
+  color:var(--text);
+}
+
+.entries{
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--border);
+  border-radius:10px;
+  overflow:hidden;
+  background:var(--surface);
+}
+.entry{
+  display:flex;
+  gap:14px;
+  padding:16px 18px;
+  align-items:flex-start;
+}
+.entry + .entry{border-top:1px solid var(--border);}
+.mark{
+  flex:none;
+  width:26px;height:26px;
+  border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;
+  margin-top:1px;
+}
+.mark.fix{background:var(--good-bg);color:var(--good);}
+.mark.new{background:var(--mint-bg);color:var(--mint);}
+
+.entry h3{
+  margin:0 0 4px;
+  font-size:15.5px;
+  font-weight:700;
+  color:var(--text);
+  line-height:1.4;
+}
+.entry p{
+  margin:0;
+  font-size:14px;
+  line-height:1.62;
+  color:var(--text-dim);
+}
+
+footer{
+  margin-top:48px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
+  font-size:13px;
+  color:var(--text-faint);
+  line-height:1.7;
+}
+
+.version-divider{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:64px 0;
+  color:var(--text-faint);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.version-divider::before,.version-divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--border);
+}
+
+@media (max-width:480px){
+  .stats{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back-link" href="index.html">&larr; voltar para a wiki</a>
+
+  <!-- ===================== ALPHA 0.6 (EM DESENVOLVIMENTO) ===================== -->
+  <article class="version">
+    <header class="hero">
+      <div class="eyebrow wip">Kurse · alpha 0.6 <span class="wip-badge">Em desenvolvimento</span></div>
+      <h1>Raridade nova,<br>salas com <span class="accent wip">identidade</span> própria</h1>
+      <p class="dek">Esta versão ainda está sendo construída — a lista abaixo é o que já está pronto até agora: duas raridades novas, Sorte e Piedade, modificadores de Elite, quatro salas novas com Bênçãos/Maldições/Pactos, e uma leva de correções.</p>
+    </header>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🎲</span><h2>Itens e raridade</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Duas raridades novas: Épico e Lendário</h3><p>Acima de Raro, com itens novos desenhados pra elas — mesma arquitetura combinável de sempre, sem virar arma nova.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Quanto mais raro, mais chance de vir amaldiçoado</h3><p>Incomum quase sempre, Raro quase sempre, Épico e Lendário praticamente garantido.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Novo atributo: Sorte</h3><p>Não soma % de chance direto — redistribui a curva de raridade, puxando peso dos tiers baixos pros altos.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Sistema de Piedade</h3><p>Passar tempo demais sem tirar um Raro, Épico ou Lendário garante um piso de raridade no próximo item — runs longas sem sorte não ficam mais travadas no lixo.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Fome de Guerra agora mostra o progresso</h3><p>O item Épico que acumula até 5 cargas permanentes na run ganhou um contador visível no HUD assim que você pega o item.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">👹</span><h2>Inimigos</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>6 modificadores de Elite</h3><p>Flamejante, Vampírico, Explosivo, Gigante, Tempestuoso e Duplicador — cada um muda o jeito que o combate contra aquele inimigo se joga.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Estrelas no lugar do triângulo de aviso</h3><p>Inimigos de elite agora mostram estrelas acima da cabeça — uma por atributo perigoso ativo, então quanto mais estrelas, mais perigoso o inimigo.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🏛️</span><h2>Salas novas</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Santuário</h3><p>Escolha 1 de 3 Bênçãos, de graça. Existe uma variante corrompida que oferece Maldições autônomas no lugar.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Evento</h3><p>Encontros de escolha com consequência — a Fonte, o Demônio, o Aventureiro Morto, o Poço dos Desejos e o Círculo do Sacrifício.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Desafio</h3><p>Sala de combate comum, mas premia quem sair sem levar dano com um item extra.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Cada sala nova com cenário próprio</h3><p>Santuário, Evento, Desafio e Pacto deixaram de ser cópias visuais umas das outras — cada uma tem luz/cor de ambiente e objetos de cenário diferentes (estátuas no Santuário, teias no Evento, altar de caveira no Pacto).</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Introdução do Evento agora é um balão de fala</h3><p>Antes aparecia como um aviso genérico no canto da tela; agora é um balão de fala de verdade, ancorado no altar do meio da sala.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🎁</span><h2>Bênçãos e Maldições autônomas</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Bênçãos</h3><p>Itens só positivos, sem preço nem malefício, encontrados em Santuários.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Maldições autônomas</h3><p>Agora existem maldições que já vêm com um benefício embutido — uma fonte extra de itens amaldiçoados, sem mudar o pareamento maldição+item que o mercador já oferecia.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🤝</span><h2>Pactos</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Sistema novo de Pactos</h3><p>Acordos de risco e recompensa oferecidos em salas dedicadas, com progresso rastreado durante a run. Primeira leva: Do Sangue, Do Mercador, Do Colosso, Do Carrasco, Do Intocável, Da Velocidade, Da Caçada, Do Colecionador, Do Guardião, Da Ganância e Do Semideus.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🎨</span><h2>Interface</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Minimapa e mapa completo com a cor certa</h3><p>As 4 salas novas antes apareciam com a cor de sala de combate; agora cada uma tem sua própria cor e legenda.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Nome da sala traduzido no HUD</h3><p>Santuário, Evento, Desafio e Pacto agora aparecem traduzidos corretamente no rótulo da sala.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Guia atualizado</h3><p>Passou a listar os capítulos de Épicos, Lendários e Pactos, além de atualizar os capítulos de Salas, Itens e Inimigos.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Bestiário avisa sobre modificadores de Elite</h3><p>Agora indica quando um inimigo pode aparecer com um modificador de Elite.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Menu de pausa mais completo</h3><p>Passou a mostrar Bênçãos no inventário, e ganhou Sorte e "Bênçãos adquiridas" na aba de estatísticas.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Tela de fim de run mais completa</h3><p>Também passou a mostrar "Bênçãos adquiridas".</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Todo Evento sempre tem 3 escolhas</h3><p>Demônio, Poço e Círculo ganharam uma 3ª opção de meio-termo — nenhum pedestal fica mais vazio.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🐛</span><h2>Correções</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Travamento intermitente ao entrar em salas</h3><p>O carregamento em segundo plano de uma sala, quando não terminava a tempo, congelava o jogo inteiro até terminar. Agora o jogo continua respondendo normalmente enquanto espera.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Ataque giratório da Guarda Imóvel podia falhar ao nascer</h3><p>Dependendo de como o golpe que ativou a fase 2 chegou nela, o ataque giratório às vezes não aparecia.</p></div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <div class="version-divider">Versão anterior</div>
+
+  <!-- ===================== ALPHA 0.5 ===================== -->
+  <article class="version">
+    <header class="hero">
+      <div class="eyebrow">Kurse · alpha 0.5</div>
+      <h1>Ricochete corrigido,<br>chefes mais <span class="accent">justos</span></h1>
+      <p class="dek">Uma leva de acertos de combate e uma tela que estava travando ao abrir.</p>
+    </header>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🎯</span><h2>Combate</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Ricochete não some mais do nada</h3><p>Em paredes diagonais ou quinas, o tiro às vezes desaparecia em vez de ricochetear. Corrigido — agora ricocheteia direitinho em qualquer ângulo.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Mira assistida corrigida no coop</h3><p>Quando a câmera afastava pra enquadrar o grupo todo, a assistência de mira do guerreiro, atirador e guardião parava de acompanhar a distância certa. Agora escala junto com a câmera.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Veneno agora respeita seus itens de redução de dano</h3><p>O dano contínuo de veneno estava ignorando qualquer item ou upgrade que reduz o dano que você toma.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Investida do cavaleiro não falhava mais silenciosamente</h3><p>Se você tivesse acabado de levar um toque dele, a investida em si podia sair sem causar dano nenhum.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Inimigos de elite com o brilho na cor certa</h3><p>Alguns inimigos elite estavam com o efeito de brilho tingido errado.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">👑</span><h2>Chefes e minibosses</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Chefes e minibosses agora se defendem durante o aviso de ataque</h3><p>Quase todos os chefes e minibosses do jogo não tinham a proteção que deveriam ter durante o "aviso" de um ataque grande — dava pra derrubar a vida deles sem nenhuma punição nessa janela. Agora todos se defendem igual.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Clone do Fragmento com vida correta em coop</h3><p>Ao se dividir, o clone estava nascendo com quase o dobro da vida que deveria em partidas de 4 jogadores ou ascensão alta.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Inimigos não atacam mais depois de mortos</h3><p>Se você matasse um inimigo bem no meio do "aviso" dele, o ataque ainda saía um instante depois — mesmo com o bicho já morto. Agora, morreu, parou.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Troca de fase dos chefes mais suave</h3><p>Trocar de fase duas vezes rápido demais podia deixar o chefe "grudado" com o tamanho errado. Corrigido.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🗺️</span><h2>Salas e progressão</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Caixas e barris quebrados continuam quebrados</h3><p>Se você quebrasse um objeto destrutível e saísse da sala, ele voltava inteiro ao reentrar — podendo bloquear de novo um caminho que você já tinha aberto.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Porta trancada incorretamente em salas com chefe</h3><p>Corrigido um caso raro onde a porta podia continuar trancada mesmo depois da sala limpa.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Escudo liberado na hora ao comprar a arma</h3><p>Comprar uma skin de arma nova só liberava o escudo combinado depois de reiniciar o jogo. Agora libera na mesma hora da compra.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🛠️</span><h2>Tela de customização</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Tela de customização/loja não abria</h3><p>Um erro estava impedindo essa tela de carregar. Agora abre normalmente.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Também demos uma geral por baixo do capô — código duplicado, pequenas inconsistências e coisas do tipo — sem mudar como o jogo se sente pra jogar.
+    </footer>
+  </article>
+
+</div>
+</body>
+</html>

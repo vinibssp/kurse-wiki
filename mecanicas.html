@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mecânicas &amp; Progressão — KURSE Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="topbar"><div class="topbar-inner">
+  <div class="site-name"><a href="index.html">KURSE Wiki</a></div>
+  <nav class="crumbs"><a href="index.html">Início</a> › Mecânicas &amp; Progressão</nav>
+</div></div>
+
+<div id="layout">
+  <aside id="sidebar">
+    <input id="search" type="text" placeholder="Filtrar nesta página...">
+    <div class="nav-group"><div class="nav-group-title">Começando</div><ul>
+      <li><a class="nav-link" href="classes.html">Classes</a></li>
+      <li><a class="nav-link current" href="mecanicas.html">Mecânicas &amp; Progressão</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">O Mundo</div><ul>
+      <li><a class="nav-link" href="salas.html">Salas</a></li>
+      <li><a class="nav-link" href="eventos.html">Eventos</a></li>
+      <li><a class="nav-link" href="npcs.html">NPCs do Hub</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Itens &amp; Loot</div><ul>
+      <li><a class="nav-link" href="itens.html">Itens</a></li>
+      <li><a class="nav-link" href="bencaos.html">Bênçãos</a></li>
+      <li><a class="nav-link" href="maldicoes.html">Maldições</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Desafios</div><ul>
+      <li><a class="nav-link" href="pactos.html">Pactos</a></li>
+      <li><a class="nav-link" href="bestiario.html">Bestiário</a></li>
+      <li><a class="nav-link" href="elites.html">Modificadores de Elite</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Sobre o jogo</div><ul>
+      <li><a class="nav-link" href="patch-notes.html">Notas de atualização</a></li>
+    </ul></div>
+  </aside>
+
+  <article id="article">
+    <div class="article-header">
+      <h1>Mecânicas &amp; Progressão</h1>
+      <p class="dek">Os números por trás de cada atributo, a Árvore de Vestígios entre runs, e como a dificuldade escala quando você continua além do primeiro chefe.</p>
+    </div>
+
+    <h2>Atributos</h2>
+    <p class="lede">Todo item, maldição, bênção e upgrade de Vestígio do jogo mexe em algum destes dez atributos. A maioria soma um valor fixo ou multiplica um percentual sobre o valor base do personagem; em dois casos — recarga do dash e dano recebido — o número baixo é o bom.</p>
+    <table class="wiki-table">
+      <thead><tr><th>Atributo</th><th>Efeito</th></tr></thead>
+      <tbody>
+        <tr data-search="velocidade movimento"><td class="name-cell">Velocidade</td><td>Velocidade de deslocamento. Base 300.</td></tr>
+        <tr data-search="destreza cadencia ataque"><td class="name-cell">Destreza</td><td>Cadência do ataque principal (não é dano). Cooldown entre ataques = 2,0 ÷ Destreza, travado entre 4 e 20.</td></tr>
+        <tr data-search="dano corpo a corpo"><td class="name-cell">Dano corpo a corpo</td><td>Dano de cada golpe de espada, incluindo o Golpe Pesado do Guerreiro (usa esse valor ×2,0).</td></tr>
+        <tr data-search="dano a distancia"><td class="name-cell">Dano à distância</td><td>Dano de cada flecha, raio de varinha ou bomba, incluindo a Bomba Espectral do Mago (usa esse valor ×2,5).</td></tr>
+        <tr data-search="municao"><td class="name-cell">Munição</td><td>Capacidade máxima de munição — relevante pra torretas e itens específicos, não pro ataque principal de nenhuma classe.</td></tr>
+        <tr data-search="vida coracoes"><td class="name-cell">Vida</td><td>Vida máxima, mostrada em corações. Um ganho líquido de vida máxima cura a diferença na hora.</td></tr>
+        <tr data-search="dash recarga"><td class="name-cell">Recarga do dash</td><td>Tempo entre um dash e o outro. Base 1,5s. Valor baixo é bom.</td></tr>
+        <tr data-search="dano recebido armadura"><td class="name-cell">Dano recebido</td><td>Multiplicador sobre o dano que você toma — não é redução fixa. O debuff "vulnerável" soma +30% em cima. Valor baixo é bom.</td></tr>
+        <tr data-search="deteccao nevoa visao"><td class="name-cell">Alcance de detecção</td><td>Multiplicador sobre a distância em que inimigos te enxergam através da névoa. Trava num piso de 0,5 — nunca chega a zero. Valor baixo é bom.</td></tr>
+        <tr data-search="sorte raridade luck"><td class="name-cell">Sorte</td><td>Não é chance direta de item raro: redistribui o peso da tabela de raridade. Cada tier recebe um bônus de <code>1 + Sorte × 0,02 × tier</code> no sorteio — Comuns (tier 0) nunca mudam; Lendário (tier 4) é o que mais se beneficia de cada ponto de Sorte.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Vestígios — a moeda entre runs</h2>
+    <p><strong>Vestígios</strong> vêm de minibosses (1 cada) e chefes (3 + o número do loop de Ascensão atual), sempre depositados num pedestal separado que precisa ser coletado na mão — diferente de ouro, que fica só com o corpo. O que já foi pego fica gravado: morrer na run não desfaz Vestígios já coletados, só o resto do inventário daquela volta.</p>
+    <p>Eles se gastam na <strong>Árvore de Vestígios</strong> do Nexus, fora da run, em 4 ramos com 27 upgrades permanentes no total. Cada nó exige o anterior como pré-requisito, e a ponta de cada ramo termina numa escolha exclusiva — pegar um lado da bifurcação fecha o outro até um reset da árvore.</p>
+
+    <h3 class="sub-heading">Corpo — vida e sobrevivência bruta</h3>
+    <table class="wiki-table">
+      <thead><tr><th>Nó</th><th>Custo</th><th>Efeito real</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">Coração Extra I <span class="hint">(raiz)</span></td><td class="num">5</td><td>+20 de vida máxima (1 coração).</td></tr>
+        <tr><td class="name-cell">Coração Extra II</td><td class="num">12</td><td>+20 de vida máxima (mais 1 coração).</td></tr>
+        <tr><td class="name-cell">Ossatura</td><td class="num">22</td><td>+10 de vida máxima.</td></tr>
+        <tr><td class="name-cell">Fôlego de Sobrevivente</td><td class="num">36</td><td>Ao entrar numa sala de Mercador, cura 10 de vida.</td></tr>
+        <tr><td class="name-cell">Última Fúria <em>(exclusivo com Couro Curtido)</em></td><td class="num">52</td><td>Com vida ≤50% do máximo, todo dano causado ganha +18%.</td></tr>
+        <tr><td class="name-cell">Couro Curtido <em>(exclusivo com Última Fúria)</em></td><td class="num">52</td><td>−12% de dano recebido.</td></tr>
+        <tr><td class="name-cell">Fôlego do Caçador <span class="hint">(lateral, em Coração Extra I)</span></td><td class="num">18</td><td>Quando um inimigo Marcado morre, o jogador mais próximo cura 10 de vida.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading">Bolso — economia e loot</h3>
+    <table class="wiki-table">
+      <thead><tr><th>Nó</th><th>Custo</th><th>Efeito real</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">Bolso Fundo <span class="hint">(raiz)</span></td><td class="num">5</td><td>A run começa com 8 moedas em vez de 5.</td></tr>
+        <tr><td class="name-cell">Vestígio do Eco</td><td class="num">12</td><td>O primeiro debuff sofrido em cada run dura metade do tempo normal.</td></tr>
+        <tr><td class="name-cell">Barganha do Eco <em>(exclusivo com Mão Grande)</em></td><td class="num">52</td><td>−15% nos preços do Mercador.</td></tr>
+        <tr><td class="name-cell">Mão Grande <em>(exclusivo com Barganha do Eco)</em></td><td class="num">52</td><td>+25% na quantidade de moedas dropada por inimigos.</td></tr>
+        <tr><td class="name-cell">Saque Selado <span class="hint">(lateral, em Bolso Fundo)</span></td><td class="num">18</td><td>Inimigos Marcados dropam +50% de moedas ao morrer — acumula com Mão Grande.</td></tr>
+        <tr><td class="name-cell">Mão Atraente <span class="hint">(lateral, em Vestígio do Eco)</span></td><td class="num">18</td><td>+60% no raio do "imã" que atrai pickups até você.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading">Passo — mobilidade</h3>
+    <table class="wiki-table">
+      <thead><tr><th>Nó</th><th>Custo</th><th>Efeito real</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">Passo Leve I <span class="hint">(raiz)</span></td><td class="num">5</td><td>+5% de velocidade de movimento.</td></tr>
+        <tr><td class="name-cell">Passo Leve II</td><td class="num">12</td><td>+7% de velocidade de movimento (soma com o nó anterior).</td></tr>
+        <tr><td class="name-cell">Recarga Rápida</td><td class="num">22</td><td>−10% na recarga do dash.</td></tr>
+        <tr><td class="name-cell">Instinto de Combate</td><td class="num">36</td><td>+8% de dano corpo a corpo e +8% de dano à distância.</td></tr>
+        <tr><td class="name-cell">Reflexo Ágil <em>(exclusivo com Contragolpe)</em></td><td class="num">52</td><td>−15% adicional na recarga do dash (soma com Recarga Rápida).</td></tr>
+        <tr><td class="name-cell">Contragolpe <em>(exclusivo com Reflexo Ágil)</em></td><td class="num">52</td><td>Ao terminar um dash, o próximo golpe corpo a corpo dentro de 1s causa +50% de dano.</td></tr>
+        <tr><td class="name-cell">Passada Fria <span class="hint">(lateral, em Recarga Rápida)</span></td><td class="num">18</td><td>Duração do dash (e da invencibilidade dele) sobe de 0,2s para 0,28s.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading">Instinto — combate, e a mecânica de Marca</h3>
+    <table class="wiki-table">
+      <thead><tr><th>Nó</th><th>Custo</th><th>Efeito real</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">Reflexo de Entrada <span class="hint">(raiz)</span></td><td class="num">5</td><td>A invencibilidade ao entrar numa sala nova sobe de 1,0s para 1,5s.</td></tr>
+        <tr><td class="name-cell">Reflexo de Cura</td><td class="num">12</td><td>Ao entrar numa sala nova com vida ≤50%, cura 5 de vida.</td></tr>
+        <tr><td class="name-cell">Pulso em Alerta</td><td class="num">22</td><td>+0,4s na janela de reset do combo (base 2,5s).</td></tr>
+        <tr><td class="name-cell">Presa Aberta</td><td class="num">36</td><td>+22% de dano contra inimigos Marcados.</td></tr>
+        <tr><td class="name-cell">Predador <em>(exclusivo com Sobrevida)</em></td><td class="num">52</td><td>+0,5s adicionais na janela de combo (soma com Pulso em Alerta: +0,9s sobre a base).</td></tr>
+        <tr><td class="name-cell">Sobrevida <em>(exclusivo com Predador)</em></td><td class="num">52</td><td>Invencibilidade após ser atingido sobe de 250ms para 550ms.</td></tr>
+        <tr><td class="name-cell">Marca da Presa <span class="hint">(lateral, em Reflexo de Entrada)</span></td><td class="num">18</td><td>Todo golpe corpo a corpo, Golpe Pesado ou Bomba Espectral marca o alvo por 4s. Não causa dano por si só — é o gatilho que Fôlego do Caçador, Saque Selado e Presa Aberta consomem.</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Em cada ramo, um nó exige o anterior como pré-requisito; a bifurcação final é mutuamente exclusiva (pegar um lado fecha o outro até resetar a árvore). Nós "laterais" ficam pendurados num nó específico da cadeia principal sem bloquear o avanço dela.</p>
+    <p class="note">Vestígios sobrando também compram skins de personagem e armas cosméticas na tela de Customização do Nexus — sem efeito em jogo, só aparência.</p>
+
+    <h2>Ascensão — o sistema de loop</h2>
+    <p>Derrotar o chefe do mapa e coletar sua recompensa abre um portal ao lado do corpo. Atravessá-lo inicia o <strong>loop seguinte</strong>: um mapa novo, mais difícil, com tudo que você já tem na run mantido. Não existe um "final" fixo — a run continua indefinidamente por loops sucessivos, cada um mais duro que o anterior.</p>
+    <table class="wiki-table">
+      <thead><tr><th>O que escala</th><th>Por loop de Ascensão</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">Dano dos inimigos</td><td class="num">×1,15 (composto)</td></tr>
+        <tr><td class="name-cell">Vida dos inimigos</td><td class="num">×1,20 (composto)</td></tr>
+        <tr><td class="name-cell">Preços do Mercador</td><td class="num">×1,18 (composto)</td></tr>
+        <tr><td class="name-cell">Orçamento de dificuldade da sala</td><td class="num">×1,25</td></tr>
+        <tr><td class="name-cell">Chance de Elite</td><td class="num">+8%, até um teto de 45%</td></tr>
+        <tr><td class="name-cell">Salas de miniboss e mercador</td><td>Dobram (1 → 2) a partir do loop 2</td></tr>
+      </tbody>
+    </table>
+    <p>O incentivo pra continuar: cada chefe derrotado em loops mais altos larga mais Vestígios (3 + o número do loop). Empurrar Ascensão é, na prática, a forma principal de acumular progressão permanente numa única run — ao custo direto de tudo ficar proporcionalmente mais caro e mais perigoso.</p>
+
+    <footer class="wiki-footer">Wiki não-oficial de KURSE.</footer>
+  </article>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

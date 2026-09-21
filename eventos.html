@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventos — KURSE Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="topbar"><div class="topbar-inner">
+  <div class="site-name"><a href="index.html">KURSE Wiki</a></div>
+  <nav class="crumbs"><a href="index.html">Início</a> › Eventos</nav>
+</div></div>
+
+<div id="layout">
+  <aside id="sidebar">
+    <input id="search" type="text" placeholder="Filtrar nesta página...">
+    <div class="nav-group"><div class="nav-group-title">Começando</div><ul>
+      <li><a class="nav-link" href="classes.html">Classes</a></li>
+      <li><a class="nav-link" href="mecanicas.html">Mecânicas &amp; Progressão</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">O Mundo</div><ul>
+      <li><a class="nav-link" href="salas.html">Salas</a></li>
+      <li><a class="nav-link current" href="eventos.html">Eventos</a></li>
+      <li><a class="nav-link" href="npcs.html">NPCs do Hub</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Itens &amp; Loot</div><ul>
+      <li><a class="nav-link" href="itens.html">Itens</a></li>
+      <li><a class="nav-link" href="bencaos.html">Bênçãos</a></li>
+      <li><a class="nav-link" href="maldicoes.html">Maldições</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Desafios</div><ul>
+      <li><a class="nav-link" href="pactos.html">Pactos</a></li>
+      <li><a class="nav-link" href="bestiario.html">Bestiário</a></li>
+      <li><a class="nav-link" href="elites.html">Modificadores de Elite</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Sobre o jogo</div><ul>
+      <li><a class="nav-link" href="patch-notes.html">Notas de atualização</a></li>
+    </ul></div>
+  </aside>
+
+  <article id="article">
+    <div class="article-header">
+      <h1>Eventos</h1>
+      <p class="dek">A sala de Evento sorteia um entre 5 cenários e apresenta 3 escolhas. A primeira tomada resolve a sala inteira.</p>
+    </div>
+
+    <div class="lede">
+      <p>Itens, bênçãos e maldições concedidos por um Evento entram no sistema normal de piedade de raridade da run — então "forçar" um item de graça pagando moedas ou vida não é totalmente de graça: ele consome parte da sorte acumulada que, de outro jeito, teria empurrado os próximos itens de sala de Tesouro pra cima.</p>
+    </div>
+
+    <h2>A Fonte</h2>
+    <p class="note">"Uma fonte antiga borbulha no centro da sala."</p>
+    <ul class="choice-list">
+      <li><span class="choice-name">Beber da fonte</span> — <span class="quote">"A água parece limpa. Ou parece só o que você quer ver."</span><br>50% de chance de curar toda a vida; 50% de chance de receber a maldição Fragmentado.</li>
+      <li><span class="choice-name">Jogar 50 moedas</span> — <span class="quote">"Custa 50 moedas. A fonte devolve algo melhor do que deveria."</span><br>Gasta 50 moedas por um item Épico garantido.</li>
+      <li><span class="choice-name">Ir embora</span> — <span class="quote">"Algumas fontes não valem o risco."</span><br>Sem efeito.</li>
+    </ul>
+
+    <h2>O Demônio</h2>
+    <p class="note">"Uma silhueta encapuzada espera, paciente, no centro da sala."</p>
+    <ul class="choice-list">
+      <li><span class="choice-name">Aceitar</span> — <span class="quote">"Um pedaço de você, em troca de poder de verdade."</span><br>Recebe uma maldição autônoma aleatória (benefício + malefício embutidos).</li>
+      <li><span class="choice-name">Negociar</span> — <span class="quote">"Uma barganha menor. Sem preço, sem grande poder."</span><br>Item Comum de graça.</li>
+      <li><span class="choice-name">Recusar</span> — <span class="quote">"Nem toda oferta precisa ser aceita."</span><br>Sem efeito.</li>
+    </ul>
+
+    <h2>O Aventureiro (morto)</h2>
+    <p class="note">"Um corpo caído ainda segura o equipamento."</p>
+    <ul class="choice-list">
+      <li><span class="choice-name">Roubar o equipamento</span> — <span class="quote">"Ele não vai precisar mais disso."</span><br>+15 a 25 moedas.</li>
+      <li><span class="choice-name">Enterrar o corpo</span> — <span class="quote">"Um gesto que ninguém vai saber que você fez."</span><br>Uma Bênção aleatória de graça.</li>
+      <li><span class="choice-name">Investigar</span> — <span class="quote">"Talvez dê pra entender o que aconteceu aqui."</span><br>+5 a 10 moedas.</li>
+    </ul>
+
+    <h2>O Poço dos Desejos</h2>
+    <p class="note">"Um poço velho, coberto de moedas enferrujadas, espera um desejo."</p>
+    <ul class="choice-list">
+      <li><span class="choice-name">Jogar uma moeda</span> — <span class="quote">"Custa 20 moedas. Todo poço promete um desejo."</span><br>Item Comum por 20 moedas.</li>
+      <li><span class="choice-name">Jogar um punhado de moedas</span> — <span class="quote">"Custa 45 moedas. Um desejo maior pede um pagamento maior."</span><br>Item Raro por 45 moedas.</li>
+      <li><span class="choice-name">Ir embora</span> — <span class="quote">"Nem todo desejo vale o preço."</span><br>Sem efeito.</li>
+    </ul>
+
+    <h2>O Círculo do Sacrifício</h2>
+    <p class="note">"Um círculo desenhado a sangue seco pulsa fracamente no chão."</p>
+    <ul class="choice-list">
+      <li><span class="choice-name">Entrar no círculo</span> — <span class="quote">"Uma parte da sua vida, agora, por poder concentrado."</span><br>Perde 25% da vida máxima atual, recebe um item Épico garantido.</li>
+      <li><span class="choice-name">Observar de longe</span> — <span class="quote">"Você estuda os símbolos sem se arriscar a entrar."</span><br>+10 a 15 moedas.</li>
+      <li><span class="choice-name">Recusar</span> — <span class="quote">"Alguns círculos é melhor nem pisar dentro."</span><br>Sem efeito.</li>
+    </ul>
+
+    <footer class="wiki-footer">Wiki não-oficial de KURSE.</footer>
+  </article>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

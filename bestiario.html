@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bestiário — KURSE Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="topbar"><div class="topbar-inner">
+  <div class="site-name"><a href="index.html">KURSE Wiki</a></div>
+  <nav class="crumbs"><a href="index.html">Início</a> › Bestiário</nav>
+</div></div>
+
+<div id="layout">
+  <aside id="sidebar">
+    <input id="search" type="text" placeholder="Filtrar nesta página...">
+    <div class="nav-group"><div class="nav-group-title">Começando</div><ul>
+      <li><a class="nav-link" href="classes.html">Classes</a></li>
+      <li><a class="nav-link" href="mecanicas.html">Mecânicas &amp; Progressão</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">O Mundo</div><ul>
+      <li><a class="nav-link" href="salas.html">Salas</a></li>
+      <li><a class="nav-link" href="eventos.html">Eventos</a></li>
+      <li><a class="nav-link" href="npcs.html">NPCs do Hub</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Itens &amp; Loot</div><ul>
+      <li><a class="nav-link" href="itens.html">Itens</a></li>
+      <li><a class="nav-link" href="bencaos.html">Bênçãos</a></li>
+      <li><a class="nav-link" href="maldicoes.html">Maldições</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Desafios</div><ul>
+      <li><a class="nav-link" href="pactos.html">Pactos</a></li>
+      <li><a class="nav-link current" href="bestiario.html">Bestiário</a></li>
+      <li><a class="nav-link" href="elites.html">Modificadores de Elite</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Sobre o jogo</div><ul>
+      <li><a class="nav-link" href="patch-notes.html">Notas de atualização</a></li>
+    </ul></div>
+  </aside>
+
+  <article id="article">
+    <div class="article-header">
+      <h1>Bestiário</h1>
+      <p class="dek">13 inimigos comuns, 5 minibosses e 4 chefes. Todo inimigo comum também existe numa variante Elite — dourada, com mais vida e um dos <a href="elites.html">modificadores de elite</a>.</p>
+    </div>
+
+    <h2>Inimigos comuns</h2>
+    <p class="lede">A coluna "Elite" mostra o debuff que a variante dourada daquele inimigo aplica ao te acertar — além do dano em si, e além de qualquer <a href="elites.html">modificador de elite</a> que ela também possa carregar. Gosma é o único inimigo comum sem variante Elite no jogo.</p>
+    <table class="wiki-table">
+      <thead><tr><th></th><th>Inimigo</th><th>Padrão</th><th>Elite aplica</th></tr></thead>
+      <tbody>
+        <tr data-search="rastejante veneno"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/rastejante.png" alt=""></td><td class="name-cell">Rastejante</td><td>Vai reto até você e não faz mais nada. Frágil, mas raramente vem sozinho.</td><td>Veneno</td></tr>
+        <tr data-search="enxame atordoado"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/enxame.png" alt=""></td><td class="name-cell">Enxame</td><td>Nasce em bando de 3 a 5. Cada um cai com um toque, mas todos chegam juntos.</td><td>Atordoado</td></tr>
+        <tr data-search="gosma"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/gosma.png" alt=""></td><td class="name-cell">Gosma</td><td>Arrasta-se atrás de você sem pressa. Sozinha é inofensiva; o problema é nunca vir sozinha.</td><td class="hint">sem variante Elite</td></tr>
+        <tr data-search="sentinela cegueira"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/sentinela.png" alt=""></td><td class="name-cell">Sentinela</td><td>Fica parada e dispara em leque. Obriga a se mexer em vez de trocar tiro parado.</td><td>Cegueira</td></tr>
+        <tr data-search="titubeante atordoado leve"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/titubeante.png" alt=""></td><td class="name-cell">Titubeante</td><td>Avança, hesita, recua e avança de novo. Ganha terreno mesmo parecendo indeciso.</td><td>Atordoado leve</td></tr>
+        <tr data-search="atirador inimigo debilitar"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/atirador.png" alt=""></td><td class="name-cell">Atirador</td><td>Atira em leque e recua quando você encosta. Não deixa a distância fechar.</td><td>Debilitar</td></tr>
+        <tr data-search="eco inimigo silencio"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/eco.png" alt=""></td><td class="name-cell">Eco</td><td>Dispara o mesmo padrão de quem veio antes dele. Some rápido, atira devagar.</td><td>Silêncio</td></tr>
+        <tr data-search="agarrador lentidao"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/agarrador.png" alt=""></td><td class="name-cell">Agarrador</td><td>Pisca antes de puxar você para perto. Sair da área durante o aviso anula o golpe.</td><td>Lentidão</td></tr>
+        <tr data-search="peste silencio"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/peste.png" alt=""></td><td class="name-cell">Peste</td><td>Persegue e dispara um leque largo. Ficar parado à distância é o jeito errado.</td><td>Silêncio</td></tr>
+        <tr data-search="bruto vulneravel"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/bruto.png" alt=""></td><td class="name-cell">Bruto</td><td>Lento e pesado. O golpe demora a sair, mas empurra longe e machuca mais que qualquer outro comum.</td><td>Vulnerável</td></tr>
+        <tr data-search="olho inimigo debilitar"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/olho.png" alt=""></td><td class="name-cell">Olho</td><td>Avança devagar e dispara uma estrela. Um raio sempre aponta o peito.</td><td>Debilitar</td></tr>
+        <tr data-search="vidente lentidao"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/vidente.png" alt=""></td><td class="name-cell">Vidente</td><td>Atira onde você vai estar, não onde está. Desvia atravessando o tiro.</td><td>Lentidão</td></tr>
+        <tr data-search="cavaleiro atordoado"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/cavaleiro.png" alt=""></td><td class="name-cell">Cavaleiro</td><td>Fecha a distância num charge avisado e dispara depois. Kitar só adianta o avanço.</td><td>Atordoado</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Minibosses <span style="font-size:0.6em;color:var(--text-faint);font-weight:400">("Ecos Inacabados", no jogo)</span></h2>
+    <table class="wiki-table">
+      <thead><tr><th></th><th>Miniboss</th><th>Padrão</th></tr></thead>
+      <tbody>
+        <tr data-search="guarda imovel miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/miniboss_guarda.png" alt=""></td><td class="name-cell">Guarda Imóvel</td><td>Esqueceu como andar. Não esqueceu como mirar: leque no peito e anel no chão, mesmo longe.</td></tr>
+        <tr data-search="duelista miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/duelista.png" alt=""></td><td class="name-cell">Duelista</td><td>Estudou você antes de sacar. Circula perto, atira no caminho e avança se você tenta kitar.</td></tr>
+        <tr data-search="brasa miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/brasa.png" alt=""></td><td class="name-cell">Brasa</td><td>Leque denso e fogo no chão que fecha depois. Sai do círculo antes do aviso acabar.</td></tr>
+        <tr data-search="tecelao miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/tecelao.png" alt=""></td><td class="name-cell">Tecelão</td><td>Fia a mesma linha sem parar, cada vez mais apertada. A brecha some se você para — e o tear mira quando fecha.</td></tr>
+        <tr data-search="fragmento voraz miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/miniboss_fragmento.png" alt=""></td><td class="name-cell">Fragmento Voraz</td><td>Não sabe mais ser um inimigo inteiro. Quando racha, os dois pedaços correm atrás e atiram mais fundo.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Chefes</h2>
+    <p class="lede">Um entre os quatro é sorteado no início da run e se mantém o mesmo em todo loop de Ascensão seguinte, ficando mais forte a cada volta. Todos lutam em 3 fases — o comportamento muda aos 66% e aos 33% de vida, com um golpe novo entrando em cada troca — e qualquer ataque pesado, do chefe ou não, é avisado no chão antes de acontecer.</p>
+    <table class="wiki-table">
+      <thead><tr><th></th><th>Chefe</th><th>Padrão</th></tr></thead>
+      <tbody>
+        <tr data-search="o que aceitou chefe boss veneno"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_aceitou.png" alt=""></td><td class="name-cell">O que aceitou</td><td>Deixou o loop terminar o que começou. Se você fica longe, avança, dispara veneno e ainda assim fecha a distância. Na metade da vida, aceita de vez e solta veneno em todas as direções — não tem lado seguro.</td></tr>
+        <tr data-search="o que esqueceu chefe boss silencio"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_esqueceu.png" alt=""></td><td class="name-cell">O que esqueceu</td><td>Não lembra do próprio nome, só do padrão. Anel de silêncio e leque mirado — ficar parado à distância não segura.</td></tr>
+        <tr data-search="o que resistiu chefe boss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_resistiu.png" alt=""></td><td class="name-cell">O que resistiu</td><td>Ainda recua, mas dispara enquanto avança e pisca perto. Confunde quem encosta e alcança quem kita.</td></tr>
+        <tr data-search="o que tentou escapar chefe boss gancho"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_escapar.png" alt=""></td><td class="name-cell">O que tentou escapar</td><td>Ainda tenta chegar na porta. O gancho avisa; sai do cone. Se a fuga erra, ele cambaleia.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Chefes, fase por fase</h2>
+    <p class="lede">Fase 2 dispara ao cair para ≤66% de vida; Fase 3, ao cair para ≤33%. Tempos de telegraph, dano e cooldowns abaixo são os valores reais do código, na Ascensão 0 (loop 0) — todos escalam junto com os multiplicadores de dano/vida de inimigo por loop descritos acima.</p>
+
+    <h3 class="sub-heading">O que aceitou <span class="hint">3900 HP · aplica Veneno</span></h3>
+    <table class="wiki-table">
+      <thead><tr><th>Fase</th><th>O que muda</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">1</td><td>Três ataques em rotação: <strong>Investida</strong> (golpe em área corpo-a-corpo, telegraph 0,9s, 38 de dano, empurrão 400, deixa uma poça de veneno de raio 60 que dura 24s causando 6 de dano + veneno a cada 0,8s); <strong>Avanço</strong> (dash de embate, telegraph 0,62s, alcance de ativação 540); <strong>Escarro</strong> (cone de 3 projéteis de veneno, telegraph 0,4s, 18 de dano cada).</td></tr>
+        <tr><td class="name-cell">2</td><td>Destrava a <strong>Explosão Radial</strong>: 14 projéteis de veneno em círculo completo, cooldown de 6s. Os três ataques da fase 1 ficam com cooldown mais curto.</td></tr>
+        <tr><td class="name-cell">3</td><td>O Avanço ganha um segundo dash em sequência automático; as poças de veneno no chão crescem 60% de tamanho; a Explosão Radial sobe para 18 projéteis com cooldown de 4,5s.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading">O que esqueceu <span class="hint">2300 HP · aplica Silêncio</span></h3>
+    <table class="wiki-table">
+      <thead><tr><th>Fase</th><th>O que muda</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">1</td><td><strong>Anel</strong> (um anel centrado nele mesmo que silencia e empurra quem estiver perto, mais uma rajada radial de 8 projéteis) e <strong>Leque</strong> (cone mirado de 5 projéteis) alternando, cooldowns de ~1,7–2,4s.</td></tr>
+        <tr><td class="name-cell">2</td><td>Invoca um <strong>Eco</strong> — um clone espectral que orbita ao redor dele e passa a disparar seu próprio Anel de forma independente. Anel principal sobe pra 10 projéteis, Leque pra 6.</td></tr>
+        <tr><td class="name-cell">3</td><td>O Eco orbita mais rápido; o Anel principal passa a disparar um segundo anel extra 0,3s depois do primeiro. Anel sobe pra 12 projéteis, Leque pra 7.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading">O que resistiu <span class="hint">2600 HP · aplica Atordoado leve</span></h3>
+    <table class="wiki-table">
+      <thead><tr><th>Fase</th><th>O que muda</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">1</td><td><strong>Tiro mirado</strong> (cone de 3 projéteis) e <strong>Piscar</strong> (teleporte que reaparece perto de você e solta uma explosão em anel na chegada — 5 projéteis + um leque extra de 4).</td></tr>
+        <tr><td class="name-cell">2</td><td>O Piscar agora também cria um <strong>chamariz</strong> (sprite falso) perto de você pra confundir, e ele fica parado e exposto por 0,8s após aterrissar. Tiro mirado sobe pra 4 projéteis; cooldown do Piscar cai.</td></tr>
+        <tr><td class="name-cell">3</td><td>O Piscar encadeia um <strong>segundo teleporte</strong> imediato antes de ficar exposto. Tiro mirado sobe pra 5 projéteis; burst de aterrissagem sobe pra 8 projéteis + 6 no leque.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading">O que tentou escapar <span class="hint">2800 HP · não aplica debuff</span></h3>
+    <table class="wiki-table">
+      <thead><tr><th>Fase</th><th>O que muda</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">1</td><td>Três ataques fixos: <strong>Agarrão</strong> (contato, telegraph 0,55s, 16 de dano); <strong>Gancho</strong> (puxão à distância, telegraph 0,78s, alcance 400); <strong>Dash de fuga</strong> (corre até a borda oposta da sala — se errar, ele mesmo fica atordoado 1,05s, abrindo uma janela de punição).</td></tr>
+        <tr><td class="name-cell">2</td><td>Nenhum ataque novo — os três ficam com cooldown mais curto, e Gancho/Dash dão uma pressionada extra logo na transição de fase.</td></tr>
+        <tr><td class="name-cell">3</td><td>Os mesmos três ataques, ainda mais rápidos. Este chefe intensifica o padrão existente em vez de introduzir mecânica nova.</td></tr>
+      </tbody>
+    </table>
+
+    <footer class="wiki-footer">Wiki não-oficial de KURSE.</footer>
+  </article>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

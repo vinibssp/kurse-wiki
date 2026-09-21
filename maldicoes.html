@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maldições — KURSE Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="topbar"><div class="topbar-inner">
+  <div class="site-name"><a href="index.html">KURSE Wiki</a></div>
+  <nav class="crumbs"><a href="index.html">Início</a> › Maldições</nav>
+</div></div>
+
+<div id="layout">
+  <aside id="sidebar">
+    <input id="search" type="text" placeholder="Filtrar nesta página...">
+    <div class="nav-group"><div class="nav-group-title">Começando</div><ul>
+      <li><a class="nav-link" href="classes.html">Classes</a></li>
+      <li><a class="nav-link" href="mecanicas.html">Mecânicas &amp; Progressão</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">O Mundo</div><ul>
+      <li><a class="nav-link" href="salas.html">Salas</a></li>
+      <li><a class="nav-link" href="eventos.html">Eventos</a></li>
+      <li><a class="nav-link" href="npcs.html">NPCs do Hub</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Itens &amp; Loot</div><ul>
+      <li><a class="nav-link" href="itens.html">Itens</a></li>
+      <li><a class="nav-link" href="bencaos.html">Bênçãos</a></li>
+      <li><a class="nav-link current" href="maldicoes.html">Maldições</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Desafios</div><ul>
+      <li><a class="nav-link" href="pactos.html">Pactos</a></li>
+      <li><a class="nav-link" href="bestiario.html">Bestiário</a></li>
+      <li><a class="nav-link" href="elites.html">Modificadores de Elite</a></li>
+    </ul></div>
+    <div class="nav-group"><div class="nav-group-title">Sobre o jogo</div><ul>
+      <li><a class="nav-link" href="patch-notes.html">Notas de atualização</a></li>
+    </ul></div>
+  </aside>
+
+  <article id="article">
+    <div class="article-header">
+      <h1>Maldições</h1>
+      <p class="dek">Um malefício que se soma ao benefício de um item — quanto mais raro o item, maior a chance dele vir amaldiçoado. O Mercador é a fonte mais comum.</p>
+    </div>
+
+    <p class="lede">Existe uma segunda categoria: <strong>maldições autônomas</strong>, que já vêm com um benefício embutido junto do malefício, sem precisar de um item pra parear. Elas não aparecem no Mercador — só num Santuário corrompido (25% de chance) ou aceitando o Demônio numa sala de Evento.</p>
+
+    <h2>Pareadas com item</h2>
+    <table class="wiki-table">
+      <thead><tr><th></th><th>Maldição</th><th>Efeito real</th></tr></thead>
+      <tbody>
+        <tr data-search="passos pesados velocidade"><td class="icon-cell"><img class="icon-sm" src="assets/items/passos_pesados.png" alt=""></td><td class="name-cell">Passos Pesados</td><td>−22% de velocidade de movimento.</td></tr>
+        <tr data-search="pele fina dano recebido"><td class="icon-cell"><img class="icon-sm" src="assets/items/pele_fina.png" alt=""></td><td class="name-cell">Pele Fina</td><td>+35% de dano recebido.</td></tr>
+        <tr data-search="rastro visivel deteccao"><td class="icon-cell"><img class="icon-sm" src="assets/items/rastro_visivel.png" alt=""></td><td class="name-cell">Rastro Visível</td><td>+80% no alcance de detecção dos inimigos; −12% de velocidade de movimento.</td></tr>
+        <tr data-search="peito apertado dash recarga"><td class="icon-cell"><img class="icon-sm" src="assets/items/peito_apertado.png" alt=""></td><td class="name-cell">Peito Apertado</td><td>+50% na recarga do dash.</td></tr>
+        <tr data-search="fragmentado vida maxima pacto de sangue fonte"><td class="icon-cell"><img class="icon-sm" src="assets/items/fragmentado.png" alt=""></td><td class="name-cell">Fragmentado</td><td>−40 de vida máxima (2 corações). A mesma maldição usada pelo Pacto de Sangue e por um dos resultados ruins do evento da Fonte.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Autônomas</h2>
+    <table class="wiki-table">
+      <thead><tr><th>Maldição</th><th>Benefício</th><th>Malefício</th></tr></thead>
+      <tbody>
+        <tr data-search="pacto de sangue dano corpo a corpo distancia vida"><td class="name-cell">Pacto de Sangue</td><td>+35% dano corpo a corpo e à distância</td><td>−80 de vida máxima (4 corações)</td></tr>
+        <tr data-search="canhao de vidro dano recebido"><td class="name-cell">Canhão de Vidro</td><td>+50% dano corpo a corpo e à distância</td><td>+50% dano recebido</td></tr>
+        <tr data-search="velocidade proibida movimento dano"><td class="name-cell">Velocidade Proibida</td><td>+30% velocidade de movimento</td><td>−20% dano corpo a corpo e à distância</td></tr>
+      </tbody>
+    </table>
+
+    <footer class="wiki-footer">Wiki não-oficial de KURSE.</footer>
+  </article>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
