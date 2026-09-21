@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-<meta name="description" content="Patch notes de Kurse: alpha 0.6 (em desenvolvimento) e alpha 0.5.">
+<meta name="description" content="Patch notes de Kurse: alpha 0.6 e alpha 0.5.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
@@ -223,12 +223,12 @@ footer{
 
   <a class="back-link" href="index.html">&larr; voltar para a wiki</a>
 
-  <!-- ===================== ALPHA 0.6 (EM DESENVOLVIMENTO) ===================== -->
+  <!-- ===================== ALPHA 0.6 ===================== -->
   <article class="version">
     <header class="hero">
-      <div class="eyebrow wip">Kurse · alpha 0.6 <span class="wip-badge">Em desenvolvimento</span></div>
-      <h1>Raridade nova,<br>salas com <span class="accent wip">identidade</span> própria</h1>
-      <p class="dek">Esta versão ainda está sendo construída. Abaixo está o que já entrou até agora: duas raridades novas, Sorte e Piedade, modificadores de Elite, quatro salas novas com Bênçãos, Maldições e Pactos, e uma leva de correções.</p>
+      <div class="eyebrow">Kurse · alpha 0.6</div>
+      <h1>Raridade nova,<br>salas com <span class="accent">identidade</span> própria</h1>
+      <p class="dek">Duas raridades novas, Sorte e Piedade, modificadores de Elite, quatro salas novas com Bênçãos, Maldições e Pactos, um sistema de Pactos repensado, ajustes de sala existente e uma leva de correções.</p>
     </header>
 
     <section class="group">
@@ -254,6 +254,18 @@ footer{
           <span class="mark new">+</span>
           <div><h3>Fome de Guerra agora mostra o progresso</h3><p>O item Épico que acumula até 5 cargas permanentes na run ganhou um contador visível no HUD assim que você pega o item.</p></div>
         </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Piedade recalibrada</h3><p>Os limiares que garantem um piso de raridade estavam curtos demais e praticamente garantiam um Épico por run. Subiram de 6/10/16 para 7/18/30 itens (Raro/Épico/Lendário).</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Evento e Desafio não garantem mais Épico</h3><p>A recompensa de "jogar 50 moedas" e "entrar no círculo" (Evento) e a de completar um Desafio sem tomar dano caíram de Épico garantido para Raro garantido — ficava fácil demais acumular raridade alta.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Descrição avisa quando uma cópia soma outro item</h3><p>Pulso Vital e Guardião Errante não fundem numa cópia só — cada cópia soma outro pulso de cura ou outra lâmina orbitando, mas a descrição não deixava isso claro. Agora avisa, igual Torreta Extra e Sombra Leal já faziam.</p></div>
+        </div>
       </div>
     </section>
 
@@ -267,6 +279,10 @@ footer{
         <div class="entry">
           <span class="mark new">+</span>
           <div><h3>Estrelas no lugar do triângulo de aviso</h3><p>Inimigos de elite agora mostram estrelas acima da cabeça, uma por atributo perigoso ativo. Quanto mais estrelas, mais cuidado.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Nascimento de inimigos à distância mais natural</h3><p>Numa sala com vários atiradores, todos os portais de nascimento abriam ao mesmo tempo. Agora cada um tem uma pequena variação aleatória antes de liberar o inimigo.</p></div>
         </div>
       </div>
     </section>
@@ -298,6 +314,24 @@ footer{
     </section>
 
     <section class="group">
+      <div class="group-head"><span class="icon">🗝️</span><h2>Salas existentes</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Tesouro avisa que é um item por pessoa</h3><p>Mesmo balão de fala que o Evento já tinha, agora também na sala de Tesouro: "Um tesouro para uma pessoa". Os totens de item sempre nascem lado a lado, nunca um atrás do outro.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Porta do chefe sinalizada dentro da sala do Miniboss</h3><p>Antes só o minimapa indicava a porta do chefe fechada. Agora ela também aparece no próprio nível como um portal escuro e parado, como se estivesse desativado, até o miniboss cair.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Seeds customizadas sempre têm miniboss</h3><p>Seeds de teste que puxam só salas de Tesouro ou só salas sem combate ficavam sem nenhum miniboss no mapa — sem ele, o portal do chefe nunca abria e a run travava. Miniboss agora é sempre gerado, mesmo nesses modos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
       <div class="group-head"><span class="icon">🎁</span><h2>Bênçãos e Maldições autônomas</h2></div>
       <div class="entries">
         <div class="entry">
@@ -317,6 +351,26 @@ footer{
         <div class="entry">
           <span class="mark new">+</span>
           <div><h3>Sistema novo de Pactos</h3><p>Acordos de risco e recompensa oferecidos em salas dedicadas, com progresso rastreado durante a run. Primeira leva: Do Sangue, Do Mercador, Do Colosso, Do Carrasco, Do Intocável, Da Velocidade, Da Caçada, Do Colecionador, Do Guardião, Da Ganância e Do Semideus.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Altar de Pacto agora oferece 2 escolhas</h3><p>Em vez de aceitar ou recusar um único trato, cada altar apresenta 2 pactos diferentes lado a lado. Escolher um resolve a sala e descarta o outro; dá pra ir embora sem pegar nenhum.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Recompensas de Pacto rebalanceadas</h3><p>Do Carrasco caiu de 30 pra 24 abates exigidos e a recompensa subiu de Raro pra Épico. Da Velocidade trocou a fraca Bênção dos Pés Leves por um item Raro garantido. Da Ganância subiu o ganho por abate (2-4 → 4-7 de ouro) e o bônus final (20 → 30, mais 10 por loop de Ascensão). Do Guardião ganhou uma bolsa de ouro extra (15 + 5 por loop) além da Bênção.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Espírito do Guardião agora tem presença visual</h3><p>Antes era só um contador de golpes invisível. Agora um orbe roxo gira visivelmente ao seu redor enquanto o Pacto do Guardião estiver ativo.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>HUD mostra o Pacto ativo</h3><p>Um indicador no HUD passou a exibir o progresso do pacto em andamento (abates, salas restantes, tempo, golpes recebidos), incluindo um pulso de alerta quando o risco de quebrar está alto.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Pacto duplicado não sobrescreve mais o ativo</h3><p>Aceitar um novo pacto enquanto outro já estava em andamento destruía o anterior sem aviso. Agora um novo altar avisa (balão de fala) que é preciso resolver o pacto atual primeiro, em vez de trocar.</p></div>
         </div>
       </div>
     </section>
@@ -352,6 +406,18 @@ footer{
           <span class="mark fix">✓</span>
           <div><h3>Todo Evento sempre tem 3 escolhas</h3><p>Demônio, Poço e Círculo ganharam uma 3ª opção de meio-termo. Nenhum pedestal fica mais vazio.</p></div>
         </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Indicador de inimigo não confunde mais portal com inimigo real</h3><p>Um portal de nascimento ainda abrindo podia roubar a prioridade de um inimigo de verdade na mesma direção, mostrando o ícone errado. Portal agora sempre perde pra um inimigo real.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Descrição do item na frente da descrição da sala</h3><p>Quando os dois balões apareciam ao mesmo tempo, o texto da sala cobria o do item. Corrigida a ordem de desenho.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Card de item sempre aparece inteiro na tela</h3><p>O balão de descrição só crescia pra cima a partir de uma margem fixa — um item com descrição bem mais longa que o normal, perto do topo da câmera, podia estourar por cima da tela. Agora o balão sempre calcula sua própria altura antes de se posicionar.</p></div>
+        </div>
       </div>
     </section>
 
@@ -365,6 +431,22 @@ footer{
         <div class="entry">
           <span class="mark fix">✓</span>
           <div><h3>Ataque giratório da Guarda Imóvel podia falhar ao nascer</h3><p>Dependendo de como o golpe que ativou a fase 2 chegou nela, o ataque giratório às vezes não aparecia.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Golpe normal do Guerreiro não fica mais "bugado" depois do Golpe Pesado</h3><p>Se um ataque normal interrompia o Golpe Pesado antes dele terminar, o corte de tela seguinte herdava o visual gigante e dourado do golpe pesado até o fim da run.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Loop da música sem quebra audível</h3><p>A música de menu e de run tinha um pequeno estalo a cada repetição. Trocado o formato de áudio comprimido por um sem compressão com ponto de loop exato.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Objetos de cenário destrutíveis não geram mais erro de física</h3><p>Quebrar certos objetos de decoração no meio de uma varredura de física do motor gerava um erro no log (inofensivo, mas registrado a cada quebra).</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Arma do Guardião independente da do Guerreiro</h3><p>A skin de arma escolhida na Customização era compartilhada entre as duas classes corpo a corpo. Agora cada uma tem sua própria escolha.</p></div>
         </div>
       </div>
     </section>
