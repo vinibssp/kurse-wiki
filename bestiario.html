@@ -81,25 +81,25 @@
         <tr data-search="guarda imovel miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/miniboss_guarda.png" alt=""></td><td class="name-cell">Guarda Imóvel</td><td>Esqueceu como andar. Não esqueceu como mirar: leque no peito e anel no chão, mesmo longe.</td></tr>
         <tr data-search="duelista miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/duelista.png" alt=""></td><td class="name-cell">Duelista</td><td>Estudou você antes de sacar. Circula perto, atira no caminho e avança se você tenta kitar.</td></tr>
         <tr data-search="brasa miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/brasa.png" alt=""></td><td class="name-cell">Brasa</td><td>Leque denso e fogo no chão que fecha depois. Sai do círculo antes do aviso acabar.</td></tr>
-        <tr data-search="tecelao miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/tecelao.png" alt=""></td><td class="name-cell">Tecelão</td><td>Fia a mesma linha sem parar, cada vez mais apertada. A brecha some se você para — e o tear mira quando fecha.</td></tr>
+        <tr data-search="tecelao miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/tecelao.png" alt=""></td><td class="name-cell">Tecelão</td><td>Fia a mesma linha sem parar, cada vez mais apertada. A brecha some se você para, e o tear mira quando fecha.</td></tr>
         <tr data-search="fragmento voraz miniboss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/miniboss_fragmento.png" alt=""></td><td class="name-cell">Fragmento Voraz</td><td>Não sabe mais ser um inimigo inteiro. Quando racha, os dois pedaços correm atrás e atiram mais fundo.</td></tr>
       </tbody>
     </table>
 
     <h2>Chefes</h2>
-    <p class="lede">Um entre os quatro é sorteado no início da run e se mantém o mesmo em todo loop de Ascensão seguinte, ficando mais forte a cada volta. Todos lutam em 3 fases: o comportamento muda aos 66% e aos 33% de vida, com um golpe novo entrando em cada troca. E qualquer ataque pesado — do chefe ou não — sempre avisa no chão antes de acontecer.</p>
+    <p class="lede">Um entre os quatro é sorteado no início da run e se mantém o mesmo em todo loop de Ascensão seguinte, ficando mais forte a cada volta. Todos lutam em 3 fases: o comportamento muda aos 66% e aos 33% de vida, com um golpe novo entrando em cada troca. E qualquer ataque pesado, do chefe ou não, sempre avisa no chão antes de acontecer.</p>
     <table class="wiki-table">
       <thead><tr><th></th><th>Chefe</th><th>Padrão</th></tr></thead>
       <tbody>
-        <tr data-search="o que aceitou chefe boss veneno"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_aceitou.png" alt=""></td><td class="name-cell">O que aceitou</td><td>Deixou o loop terminar o que começou. Se você fica longe, avança, dispara veneno e ainda assim fecha a distância. Na metade da vida, aceita de vez e solta veneno em todas as direções — não tem lado seguro.</td></tr>
-        <tr data-search="o que esqueceu chefe boss silencio"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_esqueceu.png" alt=""></td><td class="name-cell">O que esqueceu</td><td>Não lembra do próprio nome, só do padrão. Anel de silêncio e leque mirado — ficar parado à distância não segura.</td></tr>
+        <tr data-search="o que aceitou chefe boss veneno"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_aceitou.png" alt=""></td><td class="name-cell">O que aceitou</td><td>Deixou o loop terminar o que começou. Se você fica longe, avança, dispara veneno e ainda assim fecha a distância. Na metade da vida, aceita de vez e solta veneno em todas as direções. Não tem lado seguro.</td></tr>
+        <tr data-search="o que esqueceu chefe boss silencio"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_esqueceu.png" alt=""></td><td class="name-cell">O que esqueceu</td><td>Não lembra do próprio nome, só do padrão. Anel de silêncio e leque mirado: ficar parado à distância não segura.</td></tr>
         <tr data-search="o que resistiu chefe boss"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_resistiu.png" alt=""></td><td class="name-cell">O que resistiu</td><td>Ainda recua, mas dispara enquanto avança e pisca perto. Confunde quem encosta e alcança quem kita.</td></tr>
         <tr data-search="o que tentou escapar chefe boss gancho"><td class="icon-cell"><img class="icon-sm" src="assets/enemies/chefe_escapar.png" alt=""></td><td class="name-cell">O que tentou escapar</td><td>Ainda tenta chegar na porta. O gancho avisa; sai do cone. Se a fuga erra, ele cambaleia.</td></tr>
       </tbody>
     </table>
 
     <h2>Chefes, fase por fase</h2>
-    <p class="lede">Fase 2 dispara ao cair para ≤66% de vida; Fase 3, ao cair para ≤33%. Tempos de telegraph, dano e cooldowns abaixo são os valores reais do código, na Ascensão 0 (loop 0) — todos escalam junto com os multiplicadores de dano/vida de inimigo por loop descritos acima.</p>
+    <p class="lede">Fase 2 dispara ao cair para ≤66% de vida; Fase 3, ao cair para ≤33%. Tempos de telegraph, dano e cooldowns abaixo são os valores reais do código, na Ascensão 0 (loop 0). Todos escalam junto com os multiplicadores de dano/vida de inimigo por loop descritos acima.</p>
 
     <h3 class="sub-heading">O que aceitou <span class="hint">3900 HP · aplica Veneno</span></h3>
     <table class="wiki-table">
@@ -116,7 +116,7 @@
       <thead><tr><th>Fase</th><th>O que muda</th></tr></thead>
       <tbody>
         <tr><td class="name-cell">1</td><td><strong>Anel</strong> (um anel centrado nele mesmo que silencia e empurra quem estiver perto, mais uma rajada radial de 8 projéteis) e <strong>Leque</strong> (cone mirado de 5 projéteis) alternando, cooldowns de ~1,7–2,4s.</td></tr>
-        <tr><td class="name-cell">2</td><td>Invoca um <strong>Eco</strong> — um clone espectral que orbita ao redor dele e passa a disparar seu próprio Anel de forma independente. Anel principal sobe pra 10 projéteis, Leque pra 6.</td></tr>
+        <tr><td class="name-cell">2</td><td>Invoca um <strong>Eco</strong>, um clone espectral que orbita ao redor dele e passa a disparar seu próprio Anel de forma independente. Anel principal sobe pra 10 projéteis, Leque pra 6.</td></tr>
         <tr><td class="name-cell">3</td><td>O Eco orbita mais rápido; o Anel principal passa a disparar um segundo anel extra 0,3s depois do primeiro. Anel sobe pra 12 projéteis, Leque pra 7.</td></tr>
       </tbody>
     </table>
@@ -125,7 +125,7 @@
     <table class="wiki-table">
       <thead><tr><th>Fase</th><th>O que muda</th></tr></thead>
       <tbody>
-        <tr><td class="name-cell">1</td><td><strong>Tiro mirado</strong> (cone de 3 projéteis) e <strong>Piscar</strong> (teleporte que reaparece perto de você e solta uma explosão em anel na chegada — 5 projéteis + um leque extra de 4).</td></tr>
+        <tr><td class="name-cell">1</td><td><strong>Tiro mirado</strong> (cone de 3 projéteis) e <strong>Piscar</strong> (teleporte que reaparece perto de você e solta uma explosão em anel na chegada: 5 projéteis + um leque extra de 4).</td></tr>
         <tr><td class="name-cell">2</td><td>O Piscar agora também cria um <strong>chamariz</strong> (sprite falso) perto de você pra confundir, e ele fica parado e exposto por 0,8s após aterrissar. Tiro mirado sobe pra 4 projéteis; cooldown do Piscar cai.</td></tr>
         <tr><td class="name-cell">3</td><td>O Piscar encadeia um <strong>segundo teleporte</strong> imediato antes de ficar exposto. Tiro mirado sobe pra 5 projéteis; burst de aterrissagem sobe pra 8 projéteis + 6 no leque.</td></tr>
       </tbody>
@@ -135,8 +135,8 @@
     <table class="wiki-table">
       <thead><tr><th>Fase</th><th>O que muda</th></tr></thead>
       <tbody>
-        <tr><td class="name-cell">1</td><td>Três ataques fixos: <strong>Agarrão</strong> (contato, telegraph 0,55s, 16 de dano); <strong>Gancho</strong> (puxão à distância, telegraph 0,78s, alcance 400); <strong>Dash de fuga</strong> (corre até a borda oposta da sala — se errar, ele mesmo fica atordoado 1,05s, abrindo uma janela de punição).</td></tr>
-        <tr><td class="name-cell">2</td><td>Nenhum ataque novo — os três ficam com cooldown mais curto, e Gancho/Dash dão uma pressionada extra logo na transição de fase.</td></tr>
+        <tr><td class="name-cell">1</td><td>Três ataques fixos: <strong>Agarrão</strong> (contato, telegraph 0,55s, 16 de dano); <strong>Gancho</strong> (puxão à distância, telegraph 0,78s, alcance 400); <strong>Dash de fuga</strong> (corre até a borda oposta da sala; se errar, ele mesmo fica atordoado 1,05s, abrindo uma janela de punição).</td></tr>
+        <tr><td class="name-cell">2</td><td>Nenhum ataque novo: os três ficam com cooldown mais curto, e Gancho/Dash dão uma pressionada extra logo na transição de fase.</td></tr>
         <tr><td class="name-cell">3</td><td>Os mesmos três ataques, ainda mais rápidos. Este chefe intensifica o padrão existente em vez de introduzir mecânica nova.</td></tr>
       </tbody>
     </table>

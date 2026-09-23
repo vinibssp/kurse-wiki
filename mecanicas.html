@@ -62,20 +62,20 @@
         <tr data-search="destreza cadencia ataque"><td class="name-cell">Destreza</td><td>Cadência do ataque principal (não é dano). Cooldown entre ataques = 2,0 ÷ Destreza, travado entre 4 e 20.</td></tr>
         <tr data-search="dano corpo a corpo"><td class="name-cell">Dano corpo a corpo</td><td>Dano de cada golpe de espada, incluindo o Golpe Pesado do Guerreiro (usa esse valor ×2,0).</td></tr>
         <tr data-search="dano a distancia"><td class="name-cell">Dano à distância</td><td>Dano de cada flecha, raio de varinha ou bomba, incluindo a Bomba Espectral do Mago (usa esse valor ×2,5).</td></tr>
-        <tr data-search="municao"><td class="name-cell">Munição</td><td>Capacidade máxima de munição — relevante pra torretas e itens específicos, não pro ataque principal de nenhuma classe.</td></tr>
+        <tr data-search="municao"><td class="name-cell">Munição</td><td>Capacidade máxima de munição. Relevante pra torretas e itens específicos, não pro ataque principal de nenhuma classe.</td></tr>
         <tr data-search="vida coracoes"><td class="name-cell">Vida</td><td>Vida máxima, mostrada em corações. Um ganho líquido de vida máxima cura a diferença na hora.</td></tr>
         <tr data-search="dash recarga"><td class="name-cell">Recarga do dash</td><td>Tempo entre um dash e o outro. Base 1,5s. Valor baixo é bom.</td></tr>
-        <tr data-search="dano recebido armadura"><td class="name-cell">Dano recebido</td><td>Multiplicador sobre o dano que você toma — não é redução fixa. O debuff "vulnerável" soma +30% em cima. Valor baixo é bom.</td></tr>
-        <tr data-search="deteccao nevoa visao"><td class="name-cell">Alcance de detecção</td><td>Multiplicador sobre a distância em que inimigos te enxergam através da névoa. Trava num piso de 0,5 — nunca chega a zero. Valor baixo é bom.</td></tr>
-        <tr data-search="sorte raridade luck"><td class="name-cell">Sorte</td><td>Não é chance direta de item raro: redistribui o peso da tabela de raridade. Cada tier recebe um bônus de <code>1 + Sorte × 0,02 × tier</code> no sorteio — Comuns (tier 0) nunca mudam; Lendário (tier 4) é o que mais se beneficia de cada ponto de Sorte.</td></tr>
+        <tr data-search="dano recebido armadura"><td class="name-cell">Dano recebido</td><td>Multiplicador sobre o dano que você toma, não é redução fixa. O debuff "vulnerável" soma +30% em cima. Valor baixo é bom.</td></tr>
+        <tr data-search="deteccao nevoa visao"><td class="name-cell">Alcance de detecção</td><td>Multiplicador sobre a distância em que inimigos te enxergam através da névoa. Trava num piso de 0,5, nunca chega a zero. Valor baixo é bom.</td></tr>
+        <tr data-search="sorte raridade luck"><td class="name-cell">Sorte</td><td>Não é chance direta de item raro: redistribui o peso da tabela de raridade. Cada tier recebe um bônus de <code>1 + Sorte × 0,02 × tier</code> no sorteio. Comuns (tier 0) nunca mudam; Lendário (tier 4) é o que mais se beneficia de cada ponto de Sorte.</td></tr>
       </tbody>
     </table>
 
-    <h2>Vestígios — a moeda entre runs</h2>
+    <h2>Vestígios: a moeda entre runs</h2>
     <p><strong>Vestígios</strong> vêm de minibosses (1 cada) e chefes (3 + o número do loop de Ascensão atual). Diferente do ouro, que soma sozinho ao encostar no corpo, eles ficam num pedestal à parte e precisam ser coletados na mão. Mas uma vez pegos, ficam pra sempre: morrer na run apaga o resto do seu inventário, não os Vestígios já coletados.</p>
     <p>Eles se gastam na <strong>Árvore de Vestígios</strong> do Nexus, fora da run, em 4 ramos com 27 upgrades permanentes no total. Cada nó exige o anterior como pré-requisito. No fim de cada ramo tem uma bifurcação: escolher um lado fecha o outro até você resetar a árvore inteira.</p>
 
-    <h3 class="sub-heading">Corpo — vida e sobrevivência bruta</h3>
+    <h3 class="sub-heading">Corpo: vida e sobrevivência bruta</h3>
     <table class="wiki-table">
       <thead><tr><th>Nó</th><th>Custo</th><th>Efeito real</th></tr></thead>
       <tbody>
@@ -89,7 +89,7 @@
       </tbody>
     </table>
 
-    <h3 class="sub-heading">Bolso — economia e loot</h3>
+    <h3 class="sub-heading">Bolso: economia e loot</h3>
     <table class="wiki-table">
       <thead><tr><th>Nó</th><th>Custo</th><th>Efeito real</th></tr></thead>
       <tbody>
@@ -97,12 +97,12 @@
         <tr><td class="name-cell">Vestígio do Eco</td><td class="num">12</td><td>O primeiro debuff sofrido em cada run dura metade do tempo normal.</td></tr>
         <tr><td class="name-cell">Barganha do Eco <em>(exclusivo com Mão Grande)</em></td><td class="num">52</td><td>−15% nos preços do Mercador.</td></tr>
         <tr><td class="name-cell">Mão Grande <em>(exclusivo com Barganha do Eco)</em></td><td class="num">52</td><td>+25% na quantidade de moedas dropada por inimigos.</td></tr>
-        <tr><td class="name-cell">Saque Selado <span class="hint">(lateral, em Bolso Fundo)</span></td><td class="num">18</td><td>Inimigos Marcados dropam +50% de moedas ao morrer — acumula com Mão Grande.</td></tr>
+        <tr><td class="name-cell">Saque Selado <span class="hint">(lateral, em Bolso Fundo)</span></td><td class="num">18</td><td>Inimigos Marcados dropam +50% de moedas ao morrer, acumula com Mão Grande.</td></tr>
         <tr><td class="name-cell">Mão Atraente <span class="hint">(lateral, em Vestígio do Eco)</span></td><td class="num">18</td><td>+60% no raio do "imã" que atrai pickups até você.</td></tr>
       </tbody>
     </table>
 
-    <h3 class="sub-heading">Passo — mobilidade</h3>
+    <h3 class="sub-heading">Passo: mobilidade</h3>
     <table class="wiki-table">
       <thead><tr><th>Nó</th><th>Custo</th><th>Efeito real</th></tr></thead>
       <tbody>
@@ -116,7 +116,7 @@
       </tbody>
     </table>
 
-    <h3 class="sub-heading">Instinto — combate, e a mecânica de Marca</h3>
+    <h3 class="sub-heading">Instinto: combate, e a mecânica de Marca</h3>
     <table class="wiki-table">
       <thead><tr><th>Nó</th><th>Custo</th><th>Efeito real</th></tr></thead>
       <tbody>
@@ -126,13 +126,13 @@
         <tr><td class="name-cell">Presa Aberta</td><td class="num">36</td><td>+22% de dano contra inimigos Marcados.</td></tr>
         <tr><td class="name-cell">Predador <em>(exclusivo com Sobrevida)</em></td><td class="num">52</td><td>+0,5s adicionais na janela de combo (soma com Pulso em Alerta: +0,9s sobre a base).</td></tr>
         <tr><td class="name-cell">Sobrevida <em>(exclusivo com Predador)</em></td><td class="num">52</td><td>Invencibilidade após ser atingido sobe de 250ms para 550ms.</td></tr>
-        <tr><td class="name-cell">Marca da Presa <span class="hint">(lateral, em Reflexo de Entrada)</span></td><td class="num">18</td><td>Todo golpe corpo a corpo, Golpe Pesado ou Bomba Espectral marca o alvo por 4s. Não causa dano por si só — é o gatilho que Fôlego do Caçador, Saque Selado e Presa Aberta consomem.</td></tr>
+        <tr><td class="name-cell">Marca da Presa <span class="hint">(lateral, em Reflexo de Entrada)</span></td><td class="num">18</td><td>Todo golpe corpo a corpo, Golpe Pesado ou Bomba Espectral marca o alvo por 4s. Não causa dano por si só: é o gatilho que Fôlego do Caçador, Saque Selado e Presa Aberta consomem.</td></tr>
       </tbody>
     </table>
     <p class="note">Em cada ramo, um nó exige o anterior como pré-requisito; a bifurcação final é mutuamente exclusiva (pegar um lado fecha o outro até resetar a árvore). Nós "laterais" ficam pendurados num nó específico da cadeia principal sem bloquear o avanço dela.</p>
-    <p class="note">Vestígios sobrando também compram skins de personagem e armas cosméticas na tela de Customização do Nexus — sem efeito em jogo, só aparência.</p>
+    <p class="note">Vestígios sobrando também compram skins de personagem e armas cosméticas na tela de Customização do Nexus, sem efeito em jogo, só aparência.</p>
 
-    <h2>Ascensão — o sistema de loop</h2>
+    <h2>Ascensão: o sistema de loop</h2>
     <p>Derrotar o chefe do mapa e coletar sua recompensa abre um portal ao lado do corpo. Atravessá-lo inicia o <strong>loop seguinte</strong>: um mapa novo, mais difícil, com tudo que você já tem na run mantido. Não tem final fixo. A run continua por loops sucessivos até você morrer, cada um mais duro que o anterior.</p>
     <table class="wiki-table">
       <thead><tr><th>O que escala</th><th>Por loop de Ascensão</th></tr></thead>
