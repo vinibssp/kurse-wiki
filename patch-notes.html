@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-<meta name="description" content="Patch notes de Kurse: alpha 0.7 (em desenvolvimento), alpha 0.6 e alpha 0.5.">
+<meta name="description" content="Patch notes de Kurse: alpha 0.7, alpha 0.6 e alpha 0.5.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
@@ -226,10 +226,50 @@ footer{
   <!-- ===================== ALPHA 0.7 (EM DESENVOLVIMENTO) ===================== -->
   <article class="version">
     <header class="hero">
-      <div class="eyebrow wip">Kurse · alpha 0.7 <span class="wip-badge">Em desenvolvimento</span></div>
-      <h1>Lendário de <span class="accent wip">verdade</span>,<br>escolhas que pesam</h1>
-      <p class="dek">Esta versão ainda está sendo construída. Abaixo está o que já entrou até agora: Épico e Lendário ficaram raros de verdade, os dois Lendários foram redesenhados, Vulnerável passou a valer alguma coisa em inimigos, e mais uma leva de correções.</p>
+      <div class="eyebrow">Kurse · alpha 0.7</div>
+      <h1>Multiplayer <span class="accent">online</span> experimental,<br>Lendário de verdade</h1>
+      <p class="dek">A maior atualização até agora: um modo online experimental por rede local, uma leva grande de acertos no coop local, Épico e Lendário raros de verdade com os dois Lendários redesenhados, e Vulnerável passou a valer alguma coisa em inimigos.</p>
     </header>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🌐</span><h2>Multiplayer online (experimental)</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Lobby online experimental</h3><p>Uma sala de espera por rede local: hospede ou entre por endereço, escolha a classe e marque pronto antes de a run começar.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Run com seed compartilhada</h3><p>Quem hospeda inicia a partida e todo mundo entra no mesmo mapa, com a mesma composição de party.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Combate validado pelo host</h3><p>Golpe corpo a corpo, tiro do Atirador e do Mago, Torreta, Golpe Pesado e Bomba Espectral agora passam pelo host, que decide o dano; os outros jogadores só veem a cópia visual, sem duplicar o acerto.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Vida e morte sincronizadas</h3><p>Vida, cura, revive e morte de cada jogador agora vêm do host. Ninguém mais toma dano duplicado localmente.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Inimigos e encontros sincronizados</h3><p>Inimigos comuns, minibosses, chefes e as ondas do Desafio nascem no host e chegam replicados pra todo mundo, sem duplicar recompensa.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head"><span class="icon">🚀</span><h2>Rumo ao lançamento</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Créditos</h3><p>O jogo ganhou uma tela de créditos.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Integração inicial com a Steam</h3><p>Começou a integração opcional com a Steam. Fora da plataforma, o jogo continua funcionando normalmente.</p></div>
+        </div>
+      </div>
+    </section>
 
     <section class="group">
       <div class="group-head"><span class="icon">🎲</span><h2>Itens e raridade</h2></div>
@@ -250,6 +290,40 @@ footer{
     </section>
 
     <section class="group">
+      <div class="group-head"><span class="icon">🕹️</span><h2>Multiplayer local</h2></div>
+      <div class="entries">
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Dash no teclado com Espaço</h3><p>O jogador de teclado no coop agora também pode usar Espaço pra dar dash, além de Shift.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Inventário separado por jogador</h3><p>O menu de pausa mostra o inventário de cada integrante da party sem misturar item, maldição, bênção ou moeda entre eles.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Builds ofensivas batem mais forte</h3><p>Combinações de dano com boa sinergia agora conseguem valores ainda maiores.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Dano da torreta no HUD do Atirador</h3><p>Nova estatística no menu de pausa, atualizada com os bônus ativos.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Recompensas justas pra toda a party</h3><p>Chefe, miniboss, Mercador, Tesouro e Santuário agora sempre oferecem opções suficientes pra cada jogador, mesmo com classes repetidas ou menos pedestais do que gente na sala. O favorecimento ao primeiro jogador nas ofertas de item foi corrigido: a chance agora considera a classe de cada um, igual pra todos. Evento, Desafio e Pacto também distribuem a recompensa coletiva pra toda a party.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Desafio sem dano agora vale pra todo mundo</h3><p>Qualquer jogador atingido quebra a condição. Quem terminar um chefe ou miniboss sem tomar dano ganha uma recompensa pessoal extra: item e moedas, com bônus maior em chefes.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Estatísticas separadas por jogador</h3><p>A aba Estatísticas do menu de pausa mostra um painel individual pra cada participante: atributos, recursos, abates e progresso da run.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="group">
       <div class="group-head"><span class="icon">🏛️</span><h2>Salas</h2></div>
       <div class="entries">
         <div class="entry">
@@ -265,6 +339,26 @@ footer{
         <div class="entry">
           <span class="mark fix">✓</span>
           <div><h3>Armadilha de serra móvel não entra mais na parede</h3><p>A serra que desliza de um lado pro outro não tinha nenhuma checagem de colisão. Em salas onde o vaivém alcançava uma parede, ela deslizava pra dentro. Agora calcula o alcance seguro ao nascer.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark new">+</span>
+          <div><h3>Serras móveis mais variadas</h3><p>Além do trajeto horizontal, agora também podem se mover na vertical ou na diagonal, em ritmos diferentes entre si.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Portais de inimigo nascem no lugar certo</h3><p>Antes podiam abrir dentro da área de entrada do jogador. Agora ficam exatamente nos marcadores da sala, e o inimigo nasce na posição do próprio portal.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Armadilhas de fogo e de placa causam dano na hora</h3><p>Antes tinha um pequeno atraso entre acionar a armadilha e o dano sair.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Cursor não pisca mais no coop misto</h3><p>Corrigido o cursor do mouse piscando quando teclado e controle eram usados na mesma sessão local.</p></div>
+        </div>
+        <div class="entry">
+          <span class="mark fix">✓</span>
+          <div><h3>Descrição de item não pisca mais perto de pedestal</h3><p>Corrigido um caso em que a descrição aparecia e desaparecia na hora ao se aproximar.</p></div>
         </div>
         <div class="entry">
           <span class="mark fix">✓</span>
