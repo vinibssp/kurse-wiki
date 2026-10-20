@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'BoldPixels';
-  src: url('assets/fonts/BoldPixels.ttf') format('truetype');
+  font-family: 'KursePixel';
+  src: url('assets/fonts/kurse_pixel.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -73,7 +73,7 @@ code {
 }
 
 h1, h2, .pixel {
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -81,8 +81,8 @@ h1, h2, .pixel {
 /* ===================== Top bar ===================== */
 #topbar {
   background: var(--bg-2);
-  border-bottom: 4px solid var(--border);
-  border-image: url('assets/ui/bar_empty.png') 4 fill repeat;
+  border-bottom: 9px solid var(--border);
+  border-image: url('assets/ui/panel.png') 9 fill repeat;
   image-rendering: pixelated;
   position: sticky;
   top: 0;
@@ -98,7 +98,7 @@ h1, h2, .pixel {
   height: 50px;
 }
 #topbar .site-name {
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   font-size: 1.15rem;
   letter-spacing: 0.04em;
   color: var(--tier-4);
@@ -136,7 +136,7 @@ h1, h2, .pixel {
 
 #sidebar .nav-group { margin-bottom: 18px; }
 #sidebar .nav-group-title {
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -189,26 +189,13 @@ h1, h2, .pixel {
 
 .article-header {
   position: relative;
-  padding: 22px 26px 20px;
+  padding: 14px 18px 12px;
   margin: 0 0 22px;
-  border: 10px solid var(--border);
-  border-image: url('assets/ui/window.png') 12 fill repeat;
+  border: 18px solid var(--border);
+  border-image: url('assets/ui/window.png') 18 fill repeat;
   image-rendering: pixelated;
   background: var(--panel);
 }
-.article-header::before,
-.article-header::after {
-  content: "";
-  position: absolute;
-  width: 20px; height: 22px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  image-rendering: pixelated;
-  opacity: 0.9;
-  pointer-events: none;
-}
-.article-header::before { top: -6px; left: -6px; background-image: url('assets/ui/orn_tl.png'); }
-.article-header::after { top: -6px; right: -6px; background-image: url('assets/ui/orn_tr.png'); }
 .article-header h1 {
   font-size: 1.7rem;
   color: var(--tier-4);
@@ -242,7 +229,7 @@ h2 {
 }
 h2:first-child { margin-top: 0; }
 h3 {
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   font-size: 0.98rem;
   color: var(--tier-4);
   letter-spacing: 0.02em;
@@ -255,13 +242,13 @@ h3 {
   width: 250px;
   margin: 0 0 16px 20px;
   border: 9px solid var(--border);
-  border-image: url('assets/ui/panel_tall.png') 10 fill repeat;
+  border-image: url('assets/ui/panel.png') 9 fill repeat;
   image-rendering: pixelated;
   background: var(--panel);
   font-size: 0.85rem;
 }
 .infobox .infobox-title {
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   font-size: 0.95rem;
   text-align: center;
   padding: 10px 10px 8px;
@@ -289,7 +276,7 @@ table.wiki-table th {
   padding: 8px 10px;
   border-bottom: 2px solid var(--accent);
   background: var(--panel);
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   font-weight: 400;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
@@ -339,7 +326,7 @@ tr[data-tier="2"] td.name-cell { border-left: 3px solid var(--tier-2); padding-l
 tr[data-tier="3"] td.name-cell { border-left: 3px solid var(--tier-3); padding-left: 7px; }
 tr[data-tier="4"] td.name-cell { border-left: 3px solid var(--tier-4); padding-left: 7px; }
 
-/* Filter pills — styled after the game's own bar_wide/bar_empty button textures */
+/* Filter pills — as abas do kit de interface do jogo (tab_unselected / tab_hover / tab_selected) */
 .filter-row {
   display: flex;
   flex-wrap: wrap;
@@ -348,26 +335,26 @@ tr[data-tier="4"] td.name-cell { border-left: 3px solid var(--tier-4); padding-l
   font-size: 0.8rem;
 }
 .filter-row button {
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   background: var(--panel-2);
-  border: 4px solid var(--border);
-  border-image: url('assets/ui/bar_empty.png') 4 fill repeat;
+  border: 9px solid var(--border);
+  border-image: url('assets/ui/tab_unselected.png') 9 fill repeat;
   image-rendering: pixelated;
   color: var(--text-dim);
-  padding: 5px 14px;
+  padding: 0 8px;
   cursor: pointer;
   letter-spacing: 0.02em;
 }
-.filter-row button:hover { color: var(--text); }
+.filter-row button:hover { color: var(--text); border-image-source: url('assets/ui/tab_hover.png'); }
 .filter-row button.active {
   color: #fff0e8;
-  border-image: url('assets/ui/bar_wide.png') 4 fill repeat;
+  border-image-source: url('assets/ui/tab_selected.png');
 }
 
 /* ===================== Definition-list entries ===================== */
 dl.entry-list { margin: 0 0 28px; }
 dl.entry-list dt {
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   font-size: 1.05rem;
   color: var(--tier-4);
   margin-top: 22px;
@@ -397,7 +384,7 @@ ul.choice-list li {
   border-left: 3px solid var(--border);
   margin-bottom: 4px;
 }
-ul.choice-list .choice-name { color: var(--tier-4); font-weight: 600; font-family: 'BoldPixels', 'Cinzel', Georgia, serif; font-size: 0.92rem; }
+ul.choice-list .choice-name { color: var(--tier-4); font-weight: 600; font-family: 'KursePixel', 'Cinzel', Georgia, serif; font-size: 0.92rem; }
 ul.choice-list .quote { font-style: italic; color: var(--text-faint); }
 
 /* Class articles */
@@ -413,9 +400,9 @@ ul.choice-list .quote { font-style: italic; color: var(--text-faint); }
   width: 52px; height: 52px;
   image-rendering: pixelated;
   object-fit: contain;
-  border: 5px solid var(--border);
-  border-image: url('assets/ui/nineslice_dark.png') 6 fill repeat;
-  padding: 3px;
+  border: 9px solid var(--border);
+  border-image: url('assets/ui/card_normal.png') 9 fill repeat;
+  padding: 0;
 }
 .class-block h3 { margin: 0; font-size: 1.25rem; }
 .class-block .kit-line {
@@ -440,17 +427,17 @@ ul.choice-list .quote { font-style: italic; color: var(--text-faint); }
 }
 .toc-grid a {
   display: block;
-  border: 6px solid var(--border);
-  border-image: url('assets/ui/nineslice_dark.png') 6 fill repeat;
+  border: 9px solid var(--border);
+  border-image: url('assets/ui/card_normal.png') 9 fill repeat;
   image-rendering: pixelated;
   background: var(--panel);
-  padding: 12px 15px;
+  padding: 9px 12px;
   color: var(--text);
   transition: border-color 0.1s;
 }
-.toc-grid a:hover { text-decoration: none; border-color: var(--accent-bright); }
+.toc-grid a:hover { text-decoration: none; border-image-source: url('assets/ui/card_hover.png'); }
 .toc-grid a .toc-title {
-  font-family: 'BoldPixels', 'Cinzel', Georgia, serif;
+  font-family: 'KursePixel', 'Cinzel', Georgia, serif;
   font-size: 0.92rem;
   color: var(--tier-4);
   display: block;
